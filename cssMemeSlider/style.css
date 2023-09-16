@@ -40,7 +40,6 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: 10px 0 10px auto;
     max-width: fit-content;
-    justify-content: center;
 }
 
 label {
