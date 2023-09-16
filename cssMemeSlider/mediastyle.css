@@ -5,7 +5,10 @@
     }
 
     .navigation {
-        margin: 10px auto;
+        margin: 0.5rem auto;
+        position: initial;
     }
 
   }
+
+
