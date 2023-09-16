@@ -23,6 +23,12 @@ body {
     transition: transform 0.8s ease-out;
 }
 
+.descriptions {
+    display: flex;
+    width: 500%;
+    transition: transform 0.8s ease-out;
+}
+
 .slide {
     flex: 0 0 20%;
     text-align: center;
@@ -30,9 +36,22 @@ body {
     height: auto;
 }
 
+.description {
+    flex: 0 0 20%;
+    text-align: left;
+    max-width: 100%;
+    height: auto;
+}
+
 .slide img {
     max-width: 100%;
     object-fit: contain;
+}
+
+.description-text {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
 }
 
 .navigation {
@@ -70,6 +89,26 @@ label {
 }
 
 #slide5:checked ~ .slides {
+    transform: translateX(-80%);
+}
+
+#slide1:checked ~ .descriptions {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .descriptions {
+    transform: translateX(-20%);
+}
+
+#slide3:checked ~ .descriptions {
+    transform: translateX(-40%);
+}
+
+#slide4:checked ~ .descriptions {
+    transform: translateX(-60%);
+}
+
+#slide5:checked ~ .descriptions {
     transform: translateX(-80%);
 }
 
