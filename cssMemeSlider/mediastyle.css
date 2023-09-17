@@ -1,0 +1,12 @@
+@media screen and (max-width: 960px) {
+
+    .slider {
+        max-width: 90%;
+    }
+
+    .navigation {
+        margin: 0.5rem auto;
+        position: static;
+    }
+
+  }
