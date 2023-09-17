@@ -6,7 +6,7 @@
 
     .navigation {
         margin: 0.5rem auto;
-        position: initial;
+        position: static;
     }
-    
+
   }
