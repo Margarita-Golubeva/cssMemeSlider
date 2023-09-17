@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f2f2f2;
+    background-color: #1E1E24;
 }
 
 .slider {
@@ -21,13 +21,14 @@ body {
     width: 500%;
     justify-content: center;
     align-items: center;
-    transition: transform 0.8s ease-out;
+    transition: transform 0.5s ease-out;
 }
 
 .descriptions {
     display: flex;
     width: 500%;
-    transition: transform 0.8s ease-out;
+    transition: transform 0.5s ease-out;
+    transition-delay: 0.2s;
 }
 
 .slide {
@@ -42,11 +43,14 @@ body {
     text-align: left;
     max-width: 100%;
     height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF8F0;
 }
 
 .slide img {
     max-width: 100%;
     object-fit: contain;
+    border-radius: 3%;
 }
 
 .description-text {
@@ -60,20 +64,22 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: 0.5rem 0 0.5rem auto;
     max-width: fit-content;
+    background-color: #1E1E24;
     position: absolute;
     bottom: -0.5rem;
     right: 0;
+    z-index: 1;
 }
 
 label {
     cursor: pointer;
     width: 1rem;
     height: 1rem;
-    background-color: #71abfe;
+    background-color: #FFCF99;
     border-radius: 50%;
     margin: 0;
-    transition: background-color 0.8s ease-out;
-    border: solid 0.3rem #f2f2f2;
+    transition: background-color 0.5s ease-out;
+    border: solid 0.3rem #1E1E24;
     z-index: 2;
 }
 
@@ -122,7 +128,15 @@ label {
 #slide3:hover ~ .navigation label[for="slide3"],
 #slide4:hover ~ .navigation label[for="slide4"],
 #slide5:hover ~ .navigation label[for="slide5"] {
-    background-color: #708090;
+    background-color: #fefdfc;
+}
+
+#slide1:active ~ .navigation label[for="slide1"],
+#slide2:active ~ .navigation label[for="slide2"],
+#slide3:active ~ .navigation label[for="slide3"],
+#slide4:active ~ .navigation label[for="slide4"],
+#slide5:active ~ .navigation label[for="slide5"] {
+    background-color: #92140C;
 }
 
 #slide1:checked ~ .navigation label[for="slide1"],
@@ -130,16 +144,27 @@ label {
 #slide3:checked ~ .navigation label[for="slide3"],
 #slide4:checked ~ .navigation label[for="slide4"],
 #slide5:checked ~ .navigation label[for="slide5"] {
-    cursor: auto;
     width: 0.8rem;
     height: 0.8rem;
     margin-left: 0.3rem;
     margin-top: 0.3rem;
-    background-color: #f2f2f2;
-    border: solid 0.13rem #71abfe;
+    background-color: #1E1E24;
+    border: solid 0.13rem #FFCF99;
+}
+
+#slide1:checked ~ .navigation label[for="slide1"]:hover,
+#slide2:checked ~ .navigation label[for="slide2"]:hover,
+#slide3:checked ~ .navigation label[for="slide3"]:hover,
+#slide4:checked ~ .navigation label[for="slide4"]:hover,
+#slide5:checked ~ .navigation label[for="slide5"]:hover {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
+    background-color: #1E1E24;
+    border: solid 0.13rem #FFF8F0;
 }
 
 input[type="radio"] {
     display: none;
 }
-
